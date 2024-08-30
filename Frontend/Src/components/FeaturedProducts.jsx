@@ -1,5 +1,5 @@
 import React from 'react';
-import FeaturedItem from './FeaturedItem'; // Ajusta la ruta según la ubicación de tu archivo FeaturedItem.jsx
+import FeaturedItem from './FeaturedItem';
 
 const FeaturedProducts = () => {
   const products = [
@@ -80,3 +80,4 @@ const FeaturedProducts = () => {
 };
 
 export default FeaturedProducts;
+

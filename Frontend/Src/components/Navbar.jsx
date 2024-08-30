@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import '../index.css';
 
 const Navbar = () => {
   return (
@@ -39,8 +39,8 @@ const Navbar = () => {
       </nav>
 
       <nav className="menu">
-        <a href="./Frontend/Src/pages/Projects.html">Productos</a>
-        <a href="./Frontend/Src/pages/Services.html">Servicios</a>
+        <a href="../pages/productos/Projects.jsx">Productos</a>
+        <a href="../pages/servicios/Services.jsx">Servicios</a>
         <a href="./Frontend/Src/pages/Experts.html">Acerca de</a>
         <a href="./Frontend/Src/pages/blog.html">Blog</a>
         <a href="./Frontend/Src/pages/Contact.html">Contacto</a>

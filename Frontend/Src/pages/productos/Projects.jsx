@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import './styles.css';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
+import '../../index.css';
 
 const App = () => {
   const [cart, setCart] = useState([]);
