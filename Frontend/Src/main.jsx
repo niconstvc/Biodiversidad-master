@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css'; // Importa el archivo de estilos globales
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import ReactDOM from 'react-dom';
+import Navbar from './components/Navbar'; // Ajusta la ruta según la ubicación de tu archivo Navbar.jsx
+import Footer from './components/Footer'; // Ajusta la ruta según la ubicación de tu archivo Footer.jsx
+import FeaturedProducts from './components/FeaturedProducts'; // Ajusta la ruta según la ubicación de tu archivo FeaturedProducts.jsx
+import './index.css'; // Asegúrate de que la ruta sea correcta
 
-// Montando la aplicación en el elemento con id 'root' en el index.html
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <FeaturedProducts />
+      <Footer />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,44 +1,53 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './styles.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <Link className="navbar-brand" to="/">Biodiversidad.cl</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Inicio</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/services">Servicios</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/experts">Expertos</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/projects">Proyectos</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/blog">Blog</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contacto</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Iniciar sesión</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/register">Registrarse</Link>
-            </li>
-          </ul>
+    <header>
+      <div className="top-bar">
+        <div className="top-info">
+          <a href="#">Vende en Biodiversidad</a>
+          <a href="#">Registrarse</a>
+        </div>
+        <div className="top-contact">
+          <span>📞 +56 9 0303 4567</span>
+          <a href="#">Seguimiento de pedido</a>
+          <a href="#">Español</a>
+          <a href="#">CLP</a>
+          <a href="#">Iniciar sesión</a>
         </div>
       </div>
-    </nav>
+
+      <nav className="navbar">
+        <div className="logo">
+          <a href="/">Biodiversidad.cl</a>
+        </div>
+        <div className="search-bar">
+          <select>
+            <option value="all">Todos</option>
+            <option value="products">Productos</option>
+            <option value="services">Servicios</option>
+          </select>
+          <input type="text" placeholder="¿Qué estás buscando?" />
+          <button>Buscar</button>
+        </div>
+        <div className="user-actions">
+          <i className="bi bi-arrow-repeat"></i>
+          <i className="bi bi-heart"></i>
+          <i className="bi bi-cart"></i>
+        </div>
+      </nav>
+
+      <nav className="menu">
+        <a href="./Frontend/Src/pages/Projects.html">Productos</a>
+        <a href="./Frontend/Src/pages/Services.html">Servicios</a>
+        <a href="./Frontend/Src/pages/Experts.html">Acerca de</a>
+        <a href="./Frontend/Src/pages/blog.html">Blog</a>
+        <a href="./Frontend/Src/pages/Contact.html">Contacto</a>
+        <a href="./Frontend/Src/pages/Register.js">Registrarse</a>
+        <a href="./Frontend/Src/pages/Login.js" className="register-link">Iniciar Sesión</a>
+      </nav>
+    </header>
   );
 };
 

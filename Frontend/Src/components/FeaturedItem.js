@@ -1,17 +1,20 @@
 import React from 'react';
 
-const FeaturedItem = ({ image, title, price, oldPrice, badge, rating }) => {
+const FeaturedItem = ({ imageSrc, altText, badgeText, title, description, price, oldPrice, rating }) => {
   return (
-    <div className="featured-item">
+    <div className="featured-product">
       <div className="product-image">
-        <img src={image} alt={title} />
-        {badge && <span className={`badge ${badge.toLowerCase()}`}>{badge}</span>}
+        <img src={imageSrc} alt={altText} />
+        {badgeText && <span className={`badge ${badgeText.toLowerCase()}`}>{badgeText}</span>}
       </div>
       <div className="product-details">
         <h3>{title}</h3>
-        {price && <p>Desde <span className="price">${price}</span></p>}
-        {oldPrice && <span className="old-price">${oldPrice}</span>}
-        {rating && <div className="rating">★{rating}☆</div>}
+        <p>{description}</p>
+        <div className="price-container">
+          <span className="price">{price}</span>
+          {oldPrice && <span className="old-price">{oldPrice}</span>}
+        </div>
+        {rating && <div className="rating">{rating}</div>}
       </div>
     </div>
   );
